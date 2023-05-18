@@ -5,14 +5,11 @@ const nl2br = (str) => {
 }
 
 const getToday = () => {
-    const now = new Date();
-    const Year = now.getFullYear();
-    // const Month = now.getMonth() + 1;
-    const Month = ("0"+(now.getMonth()+1)).slice(-2);
-    // const Date = now.getDate();
-    const Date = ("0"+now.getDate()).slice(-2);
-
-    return Year + "-" + Month + "-" + Date + "-";
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = ("0" + (today.getMonth() + 1)).slice(-2);
+    const dd = ("0" + today.getDate()).slice(-2);
+    return yyyy + '-' + mm + '-' + dd;
 }
 
 export { nl2br, getToday }
